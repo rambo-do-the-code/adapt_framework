@@ -1,0 +1,27 @@
+{
+    "dependencies": {
+        "adapt-contrib-vanilla": "theme",
+        "adapt-contrib-text": "component",
+        "adapt-contrib-narrative": "component",
+        "adapt-contrib-media": "component",
+        "adapt-contrib-hotgraphic": "component",
+        "adapt-contrib-blank": "component",
+        "adapt-contrib-accordion": "component",
+        "adapt-contrib-graphic": "component",
+        "adapt-contrib-matching": "component",
+        "adapt-contrib-textInput": "component",
+        "adapt-contrib-mcq": "component",
+        "adapt-contrib-gmcq": "component",
+        "adapt-contrib-assessment": "extension",
+        "adapt-contrib-assessmentResults": "component",
+        "adapt-contrib-trickle": "extension",
+        "adapt-contrib-tutor": "extension",
+        "adapt-contrib-boxMenu": "menu",
+        "adapt-contrib-pageLevelProgress": "extension",
+        "adapt-contrib-resources": "extension",
+        "adapt-contrib-slider": "component",
+        "adapt-contrib-spoor": "extension",
+        "adapt-contrib-bookmarking": "extension",
+        "adapt-contrib-languagePicker": "extension"
+    }
+}
