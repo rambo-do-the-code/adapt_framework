@@ -7,6 +7,7 @@ class McqView extends QuestionView {
     this.onItemSelect = this.onItemSelect.bind(this);
     this.onItemFocus = this.onItemFocus.bind(this);
     this.onItemBlur = this.onItemBlur.bind(this);
+    this.updateSubmitButtonState = this.updateSubmitButtonState.bind(this)
     super.initialize(...args);
   }
 
@@ -16,6 +17,7 @@ class McqView extends QuestionView {
 
   onQuestionRendered() {
     this.setReadyStatus();
+    this.updateSubmitButtonState()
   }
 
   onKeyPress(event) {
@@ -66,6 +68,19 @@ class McqView extends QuestionView {
     this.model.resetItems();
   }
 
+  updateSubmitButtonState() {
+    const $submitButton = this.$(
+      '.mcq button[aria-label="Submit"]'
+    );
+    const $inputBox = this.$(
+      ".mcq-item__input"
+    );
+
+    const allFilled = $inputBox
+      .toArray()
+      .every((input) => $(input).val().trim() !== "");
+    $submitButton.prop("disabled", !allFilled);
+  }
 }
 
 McqView.template = 'mcq.jsx';
